@@ -61,6 +61,11 @@
           <div v-if="item.isSale" class="item-sale-block">
             <p>Акция</p>
           </div>
+          <div class="item-sale-block-detail-info-ob">
+            <button class="item-sale-block-detail-info">
+              Подробнее
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -257,6 +262,42 @@
   top:10px;
   left: 10px;
 }
+.item-sale-block-detail-info-ob{
+  opacity: 0;
+  backdrop-filter: blur(0.9px);
+  position: absolute;
+    top: 380px;
+    border: none;
+  width: 320px;
+  height: 88px;
+  top: 389px;
+  border-radius: 0px 0px 20px 20px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.item:hover .item-sale-block-detail-info-ob {
+  opacity: 1;
+}
+
+.item-sale-block-detail-info{
+  background: #E45302;
+  width: 258px;
+  height: 48px;
+  border-radius: 20px;
+  color: white;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22.4px;
+  cursor: pointer;
+  border: none;
+
+}
+.item:hover .item-sale-block-detail-info {
+  opacity: 1;
+}
 
 .typography-wrapper{
   display: flex;
@@ -337,4 +378,5 @@
   gap: 33px;
   justify-content: end;
 }
+
 </style>
